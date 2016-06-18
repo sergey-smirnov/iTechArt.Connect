@@ -5,30 +5,36 @@ import React from 'react';
 import Immutable from 'immutable';
 import { Actions as UserActions } from '../constants/user';
 
-import fetch from 'isomorphic-fetch';
-
 const InitialState = Immutable.Map({
+    token: null,
     authenticated: false,
     profile: null,
-    isAuthenticationInProgress: false
+    isAuthenticationInProgress: false,
+    image: null
 });
 
 export function user(state = InitialState, action) {
     switch (action.type) {
+        case UserActions.UPDATE_IMAGE:
+            return state
+                .set('image', action.imageUrl)
+                .set('isAuthenticationInProgress', false);
         case UserActions.REQUEST_AUTHENTICATION:
             return state
                 .delete('profile')
                 .set('authenticated', false)
                 .set('isAuthenticationInProgress', true);
+        case UserActions.AUTHENTICATION_FAILED:
+            return state
+                .delete('profile')
+                .set('authenticated', false)
+                .set('isAuthenticationInProgress', false);
         case UserActions.AUTHENTICATED:
             return state
-                .set('profile', action.profile)
+                .set('token', action.token)
+                .delete('profile')
                 .set('authenticated', true)
                 .set('isAuthenticationInProgress', false);
-            // case UserActions.AUTHENTICATE:
-            //     return state
-            //         .set('profile', { name: action.name })
-            //         .set('authenticated', true);
         case UserActions.UNAUTHENTICATE:
             return state
                 .delete('profile')

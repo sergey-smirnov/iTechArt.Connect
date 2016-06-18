@@ -6,13 +6,15 @@ import UserActions from '../actions/userActions.js';
 const mapStateToProps = (state) => {
     return {
         authenticated: state.UserReducer.get("authenticated"),
-        isInProgress: state.UserReducer.get("isAuthenticationInProgress")
+        isInProgress: state.UserReducer.get("isAuthenticationInProgress"),
+        userImage: state.UserReducer.get('image')
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onSuccess: (username) => { dispatch(UserActions.Authenticate(username)) }
+        onRequestImage: (username) => { dispatch(UserActions.RequestImage(username)) },
+        onLogin: (username, password) => { dispatch(UserActions.Authenticate(username, password)) }
     }
 }
 

@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React, { PropTypes, Component } from 'react'
 
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -28,46 +28,76 @@ const userImageStyle = {
 
 const imageStyle = {
     maxWidth: '100%',
-    maxHeight: '100%'
+    maxHeight: '100%',
+    minWidth: '100%',
+    minHeight: '100%'
 };
 
-const LoginForm = ({ authenticated, isInProgress, onSuccess }) => (
-  <div className='login-form'>
-    <Paper>
-      <Paper style={userImageStyle} zDepth={1} circle={true}>
-        {isInProgress ? <CircularProgress size={2.1} /> : <img style={imageStyle} src='https://avatars2.githubusercontent.com/u/1629790?v=3&s=460' />}
-      </Paper>
-      <br />
-      <TextField
-         hintText='Enter your domain name'
-         fullWidth={true}
-         floatingLabelText='Name'
-      />
-      <br />
-      <TextField
-          hintText='Password'
-          fullWidth={true}
-          floatingLabelText='Password'
-          type='password'
-      />
-      <br />
-      <div className='form-buttons'>
-          <RaisedButton
-              onClick={onSuccess}
-              className='login-button'
-              label='Login'
-              labelPosition='before'
-              primary={true}
-          />
-      </div>
-    </Paper>
-</div>
-);
+
+class LoginForm extends Component {
+    constructor(props, context) {
+        super(props, context);
+
+        this.state = {
+            userImageSrc: 'https://avatars2.githubusercontent.com/u/1629790?v=3&s=460'
+        };
+    }
+
+    onLoginButtonClick() {
+        this.props.onLogin(this.refs.name.input.value, this.refs.password.input.value);
+    }
+
+    onNameChanged() {
+        let name = this.refs.name.input.value;
+
+        this.props.onRequestImage(name);
+    }
+
+    render() {
+        return (
+          <div className='login-form'>
+            <Paper>
+                <Paper style={userImageStyle} zDepth={1} circle={true}>
+                  {this.props.isInProgress ? <CircularProgress size={2.1} /> : <img style={imageStyle} src={this.props.userImage} />}
+                </Paper>
+                <br />
+                <TextField
+                   ref='name'
+                   hintText='Enter your domain name'
+                   fullWidth={true}
+                   floatingLabelText='Name'
+                   onChange={this.onNameChanged.bind(this)}
+                />
+                <br />
+                <TextField
+                    ref='password'
+                    hintText='Password'
+                    fullWidth={true}
+                    floatingLabelText='Password'
+                    type='password'
+                />
+                <br />
+                <div className='form-buttons'>
+                    <RaisedButton
+                        onClick={this.onLoginButtonClick.bind(this)}
+                        className='login-button'
+                        label='Login'
+                        labelPosition='before'
+                        primary={true}
+                    />
+                </div>
+              </Paper>
+            </div>
+        );
+    }
+}
 
 LoginForm.propTypes = {
     authenticated: PropTypes.bool.isRequired,
     isInProgress: PropTypes.bool.isRequired,
-    onSuccess: PropTypes.func.isRequired
+    userImage: PropTypes.string,
+    onLogin: PropTypes.func.isRequired,
+    onRequestImage: PropTypes.func.isRequired
 }
 
 export default LoginForm
