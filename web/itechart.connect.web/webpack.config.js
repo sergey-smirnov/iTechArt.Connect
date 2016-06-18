@@ -27,7 +27,7 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            title: 'One More Redux Application',
+            title: 'iTechArt.Connect!',
             hash: false,
             template: './templates/index.ejs'
         }),
