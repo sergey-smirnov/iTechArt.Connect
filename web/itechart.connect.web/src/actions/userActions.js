@@ -24,7 +24,7 @@ const UserActions = {
                     dispatch(me.UpdateImage(response.body.result));
                 })
                 .catch(function(response) {
-                    // dispatch(me.AuthenticationFailed(response.body.access_token));
+                      dispatch(me.UpdateImage());
                 });
         }
     },

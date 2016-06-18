@@ -10,14 +10,14 @@ const InitialState = Immutable.Map({
     authenticated: false,
     profile: null,
     isAuthenticationInProgress: false,
-    image: null
+    image: 'http://learngroup.org/assets/images/logos/default_male.jpg'
 });
 
 export function user(state = InitialState, action) {
     switch (action.type) {
         case UserActions.UPDATE_IMAGE:
             return state
-                .set('image', action.imageUrl)
+                .set('image', action.imageUrl || 'http://learngroup.org/assets/images/logos/default_male.jpg')
                 .set('isAuthenticationInProgress', false);
         case UserActions.REQUEST_AUTHENTICATION:
             return state

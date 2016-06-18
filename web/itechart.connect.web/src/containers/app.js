@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import { Router, Route, browserHistory } from 'react-router';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { routerMiddleware, push } from 'react-router-redux'
 
 import thunkMiddleware from 'redux-thunk'
 
@@ -15,12 +16,17 @@ import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import UserLogin from './userLogin.js';
 import AppBar from './appBar.js';
 import NavigationMenu from './navigationMenu.js';
+import MapContainer from './mapContainer.js';
 
 import { omReactApp } from '../reducers/reducers.js';
 
-const store = createStore(omReactApp, applyMiddleware(thunkMiddleware));
+// Apply the middleware to the store
+const routerM = routerMiddleware(browserHistory);
+
+const store = createStore(omReactApp, applyMiddleware(thunkMiddleware, routerM));
 // Create an enhanced history that syncs navigation events with the store
 const history = syncHistoryWithStore(browserHistory, store);
+
 
 const muiTheme = getMuiTheme();
 
@@ -41,8 +47,8 @@ export default class App extends Component {
               <Provider store={store}>
               <Router history={history}>
                 <Route path="/" component={Page}>
-                  <Route path="bar" component={AppBar}/>
                   <Route path="login" component={UserLogin}/>
+                  <Route path="map" component={MapContainer}/>
                 </Route>
               </Router>
               </Provider>

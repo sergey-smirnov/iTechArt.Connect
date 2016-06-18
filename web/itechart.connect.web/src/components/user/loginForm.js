@@ -39,7 +39,6 @@ class LoginForm extends Component {
         super(props, context);
 
         this.state = {
-            userImageSrc: 'https://avatars2.githubusercontent.com/u/1629790?v=3&s=460'
         };
     }
 
