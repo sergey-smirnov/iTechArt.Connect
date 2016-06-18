@@ -18,13 +18,14 @@ import AppBar from './appBar.js';
 import NavigationMenu from './navigationMenu.js';
 import MapContainer from './mapContainer.js';
 import AuthContainer from './authContainer.js';
+import EmployeesContainer from './employeesContainer.js';
 
 import { omReactApp } from '../reducers/reducers.js';
 
 // Apply the middleware to the store
 const routerM = routerMiddleware(browserHistory);
 
-const store = createStore(omReactApp, applyMiddleware(thunkMiddleware, routerM));
+export const store = createStore(omReactApp, applyMiddleware(thunkMiddleware, routerM));
 // Create an enhanced history that syncs navigation events with the store
 const history = syncHistoryWithStore(browserHistory, store);
 
@@ -51,6 +52,7 @@ export default class App extends Component {
               <Router history={history}>
                 <Route path="/" component={Page}>
                   <Route path="map" component={MapContainer}/>
+                  <Route path="users" component={EmployeesContainer}/>
                 </Route>
               </Router>
               </Provider>

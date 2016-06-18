@@ -56,6 +56,7 @@ class LoginForm extends Component {
         return (
           <div className='login-form'>
             <Paper>
+                <img className='logo' src='https://wiki.itechart-group.com/s/en_GB-1988229788/4731/0a2d13ba65b62df25186f4b87e6c642af1792689.52/_/images/logo/confluence-logo.png'></img>
                 <Paper style={userImageStyle} zDepth={1} circle={true}>
                   {this.props.isInProgress ? <CircularProgress size={2.1} /> : <img style={imageStyle} src={this.props.userImage} />}
                 </Paper>

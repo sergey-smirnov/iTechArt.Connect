@@ -1,9 +1,10 @@
 import { Actions as EmployeesActionsTypes } from '../constants/employees.js';
+
 var xhr = require('xhr-promise-redux');
 
 const URL = "http://localhost:1716/api/users";
 
-const UserActions = {
+const EmployeesActions = {
     EmployeesFetched: function(employees) {
         return {
             type: EmployeesActionsTypes.EMPLOYEES_FETCHED,
@@ -12,16 +13,19 @@ const UserActions = {
     },
 
     FetchEmpoyees: function(filter) {
-        return (dispatch) => {
+        return (dispatch, getState) => {
             let me = this;
 
             dispatch(this.RequestEmployees());
-
-            xhr.get(`${URL}`, {
+            let departmentCode = getState().user.get('profile').department.code;
+            xhr.get(`${URL}?departmentCode=${departmentCode}`, {
+                    headers: {
+                      'Authorization': 'Bearer ' + getState().user.get('token')
+                    },
                     responseType: 'json'
                 })
                 .then(function(response) {
-                    dispatch(me.EmployeesFetched(response.body.result));
+                    dispatch(me.EmployeesFetched(response.body.result.items/*.slice(50,100)*/));
                 });
         }
     },

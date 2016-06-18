@@ -4,5 +4,6 @@ export const Actions = {
     AUTHENTICATED: '__actions__user_authenticated',
     AUTHENTICATE: '__actions__user_authenticate',
     UNAUTHENTICATE: '__actions__user_unauthenticate',
-    UPDATE_IMAGE: '__actions__user_update_image'
+    UPDATE_IMAGE: '__actions__user_update_image',
+    PROFILE_FETCHED: '__actions__user_profile_fetched'
 };

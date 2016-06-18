@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 
 import TopBar from '../components/app/topBar.js';
+import UserActions from '../actions/userActions.js';
 
 const mapStateToProps = (state) => {
     return {
@@ -9,7 +10,9 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-    return {}
+    return {
+        onLogout: () => { dispatch(UserActions.Unauthenticate()) }
+    }
 }
 
 const AppBar = connect(

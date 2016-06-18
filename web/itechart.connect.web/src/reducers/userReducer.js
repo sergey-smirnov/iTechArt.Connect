@@ -32,13 +32,14 @@ export function user(state = InitialState, action) {
         case UserActions.AUTHENTICATED:
             return state
                 .set('token', action.token)
-                .delete('profile')
                 .set('authenticated', true)
                 .set('isAuthenticationInProgress', false);
-        case UserActions.UNAUTHENTICATE:
+        case UserActions.PROFILE_FETCHED:
             return state
-                .delete('profile')
-                .set('authenticated', false);
+                .set('profile', action.profile)
+                .set('isAuthenticationInProgress', false);
+        case UserActions.UNAUTHENTICATE:
+            return InitialState;
         default:
             return state;
     }
