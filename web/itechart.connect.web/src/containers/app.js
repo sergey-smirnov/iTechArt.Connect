@@ -17,6 +17,7 @@ import UserLogin from './userLogin.js';
 import AppBar from './appBar.js';
 import NavigationMenu from './navigationMenu.js';
 import MapContainer from './mapContainer.js';
+import AuthContainer from './authContainer.js';
 
 import { omReactApp } from '../reducers/reducers.js';
 
@@ -31,13 +32,15 @@ const history = syncHistoryWithStore(browserHistory, store);
 const muiTheme = getMuiTheme();
 
 const Page = ({ children }) => (
-  <div>
-      <NavigationMenu />
-      <div className='content-container'>
-        <AppBar title="iTechArt.Connect!" showMenuIconButton={false}/>
-        {children}
-      </div>
-  </div>
+  <AuthContainer>
+    <div>
+        <NavigationMenu />
+        <div className='content-container'>
+          <AppBar title="iTechArt.Connect!" showMenuIconButton={false}/>
+          {children}
+        </div>
+    </div>
+  </AuthContainer>
 );
 
 export default class App extends Component {
@@ -47,7 +50,6 @@ export default class App extends Component {
               <Provider store={store}>
               <Router history={history}>
                 <Route path="/" component={Page}>
-                  <Route path="login" component={UserLogin}/>
                   <Route path="map" component={MapContainer}/>
                 </Route>
               </Router>

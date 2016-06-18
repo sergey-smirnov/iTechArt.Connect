@@ -1,10 +1,11 @@
 'use strict';
 
 import { createStore, combineReducers } from 'redux';
-import { user as UserReducer } from './userReducer';
+import { user } from './userReducer.js';
+import { employees } from './employeesReducer.js';
 
 import { routerReducer } from 'react-router-redux';
 
-let reducers = { UserReducer, routing: routerReducer };
+let reducers = { user, employees, routing: routerReducer };
 
 export const omReactApp = combineReducers(reducers);

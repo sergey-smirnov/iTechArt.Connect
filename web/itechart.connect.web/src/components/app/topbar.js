@@ -6,10 +6,7 @@ import { red800, green800 } from 'material-ui/styles/colors';
 
 const TopBar = ({ authenticated }) => (
   <AppBar title="iTechArt.Connect!"
-          iconElementRight={
-            <FontIcon className="material-icons" color={authenticated ? green800 : red800}>done</FontIcon>
-          }
-  />
+          iconElementRight={<FontIcon className="material-icons" color={authenticated ? green800 : red800}>done</FontIcon>} />
 );
 
 TopBar.propTypes = {

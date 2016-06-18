@@ -5,7 +5,7 @@ import UserLogin from './userLogin.js';
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        authenticated: state.UserReducer.get("authenticated"),
+        authenticated: state.user.get("authenticated"),
         defaultComponent: UserLogin,
         children: ownProps.children
     }

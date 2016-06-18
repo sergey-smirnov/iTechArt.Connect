@@ -7,9 +7,9 @@ import lodash from 'lodash';
 
 const mapStateToProps = (state) => {
     return {
-        authenticated: state.UserReducer.get("authenticated"),
-        isInProgress: state.UserReducer.get("isAuthenticationInProgress"),
-        userImage: state.UserReducer.get('image')
+        authenticated: state.user.get("authenticated"),
+        isInProgress: state.user.get("isAuthenticationInProgress"),
+        userImage: state.user.get('image')
     }
 }
 

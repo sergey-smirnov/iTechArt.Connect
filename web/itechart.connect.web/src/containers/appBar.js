@@ -4,7 +4,7 @@ import TopBar from '../components/app/topBar.js';
 
 const mapStateToProps = (state) => {
     return {
-        authenticated: state.UserReducer.get("authenticated")
+        authenticated: state.user.get("authenticated")
     }
 }
 
