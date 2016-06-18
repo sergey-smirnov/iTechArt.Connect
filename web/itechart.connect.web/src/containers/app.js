@@ -14,6 +14,7 @@ import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 
 import UserLogin from './userLogin.js';
 import AppBar from './appBar.js';
+import NavigationMenu from './navigationMenu.js';
 
 import { omReactApp } from '../reducers/reducers.js';
 
@@ -25,8 +26,11 @@ const muiTheme = getMuiTheme();
 
 const Page = ({ children }) => (
   <div>
-      <AppBar title="iTechArt.Connect!"/>
-      {children}
+      <NavigationMenu />
+      <div className='content-container'>
+        <AppBar title="iTechArt.Connect!" showMenuIconButton={false}/>
+        {children}
+      </div>
   </div>
 );
 
