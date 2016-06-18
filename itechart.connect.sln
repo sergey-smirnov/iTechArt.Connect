@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{075BEE27-FA49-4A4C-B2CF-B78DB75028BF}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{1722C0ED-FDBF-467F-A6AF-D748D57D9B36}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web", "web", "{EA7D5816-4B6F-4C8A-B809-8866E7ED3470}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "itechart.connect.api.smg", "api\itechart.connect.api.smg\itechart.connect.api.smg.csproj", "{06B5228C-2955-4EF1-9A90-10D6C4BF0651}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "itechart.connect.api.data", "api\itechart.connect.api.data\itechart.connect.api.data.csproj", "{D024587D-CB99-493B-A19C-07BF2AF04E09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "itechart.connect.api", "api\itechart.connect.api\itechart.connect.api.csproj", "{13E1599B-A24B-414D-B595-D8CDF9883A1B}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "itechart.connect.web", "web\itechart.connect.web\", "{993A50E3-2004-4BEC-A2B0-6E0BF9BB51DE}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_54888"
+		Debug.AspNetCompiler.PhysicalPath = "web\itechart.connect.web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54888\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_54888"
+		Release.AspNetCompiler.PhysicalPath = "web\itechart.connect.web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54888\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54888"
+		SlnRelativePath = "web\itechart.connect.web\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06B5228C-2955-4EF1-9A90-10D6C4BF0651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06B5228C-2955-4EF1-9A90-10D6C4BF0651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06B5228C-2955-4EF1-9A90-10D6C4BF0651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06B5228C-2955-4EF1-9A90-10D6C4BF0651}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D024587D-CB99-493B-A19C-07BF2AF04E09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D024587D-CB99-493B-A19C-07BF2AF04E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D024587D-CB99-493B-A19C-07BF2AF04E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D024587D-CB99-493B-A19C-07BF2AF04E09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13E1599B-A24B-414D-B595-D8CDF9883A1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13E1599B-A24B-414D-B595-D8CDF9883A1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13E1599B-A24B-414D-B595-D8CDF9883A1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13E1599B-A24B-414D-B595-D8CDF9883A1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{993A50E3-2004-4BEC-A2B0-6E0BF9BB51DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{993A50E3-2004-4BEC-A2B0-6E0BF9BB51DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{993A50E3-2004-4BEC-A2B0-6E0BF9BB51DE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{993A50E3-2004-4BEC-A2B0-6E0BF9BB51DE}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{06B5228C-2955-4EF1-9A90-10D6C4BF0651} = {1722C0ED-FDBF-467F-A6AF-D748D57D9B36}
+		{D024587D-CB99-493B-A19C-07BF2AF04E09} = {1722C0ED-FDBF-467F-A6AF-D748D57D9B36}
+		{13E1599B-A24B-414D-B595-D8CDF9883A1B} = {1722C0ED-FDBF-467F-A6AF-D748D57D9B36}
+		{993A50E3-2004-4BEC-A2B0-6E0BF9BB51DE} = {EA7D5816-4B6F-4C8A-B809-8866E7ED3470}
+	EndGlobalSection
+EndGlobal

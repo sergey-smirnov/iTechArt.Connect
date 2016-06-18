@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c6654e8f-b355-4b1c-88b5-e02be12767a2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address=" https://smg.itechart-group.com/MobileServiceNew/MobileService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MobileService.xsd" MetadataType="Schema" ID="896036b8-a869-4061-9b28-88a943326b81" SourceId="1" SourceUrl="http://smg-new.icx.local/MobileServiceNew/MobileService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MobileService1.xsd" MetadataType="Schema" ID="6c79a09d-6b15-4577-9631-2ae41bdd32d8" SourceId="1" SourceUrl="http://smg-new.icx.local/MobileServiceNew/MobileService.svc?xsd=xsd3" />
+    <MetadataFile FileName="MobileService2.xsd" MetadataType="Schema" ID="b1e8a132-55a2-4320-aae9-108b46defb9a" SourceId="1" SourceUrl="http://smg-new.icx.local/MobileServiceNew/MobileService.svc?xsd=xsd4" />
+    <MetadataFile FileName="MobileService3.xsd" MetadataType="Schema" ID="946c21f6-7860-468a-b8d2-386e765ae939" SourceId="1" SourceUrl="http://smg-new.icx.local/MobileServiceNew/MobileService.svc?xsd=xsd6" />
+    <MetadataFile FileName="MobileService4.xsd" MetadataType="Schema" ID="3fadb2f1-16fb-4504-800b-d3041ecae44e" SourceId="1" SourceUrl="http://smg-new.icx.local/MobileServiceNew/MobileService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MobileService.disco" MetadataType="Disco" ID="4332c959-e369-4a7b-8b26-3276c9835fc7" SourceId="1" SourceUrl="http://smg-new.icx.local/MobileServiceNew/MobileService.svc?disco" />
+    <MetadataFile FileName="MobileService5.xsd" MetadataType="Schema" ID="7bb82eb9-8758-44df-ad7a-bd8561fe4608" SourceId="1" SourceUrl="http://smg-new.icx.local/MobileServiceNew/MobileService.svc?xsd=xsd5" />
+    <MetadataFile FileName="MobileService6.xsd" MetadataType="Schema" ID="937eb877-1ea7-4c7c-a7f7-26ce9d3ea5d6" SourceId="1" SourceUrl="http://smg-new.icx.local/MobileServiceNew/MobileService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MobileService.wsdl" MetadataType="Wsdl" ID="1f301a91-8a0d-4d85-99c3-c189dfce9db1" SourceId="1" SourceUrl="http://smg-new.icx.local/MobileServiceNew/MobileService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

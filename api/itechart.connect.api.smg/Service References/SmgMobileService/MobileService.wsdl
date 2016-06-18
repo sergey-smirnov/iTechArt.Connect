@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MobileService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://smg-new.icx.local/MobileServiceNew/MobileService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://smg-new.icx.local/MobileServiceNew/MobileService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://smg-new.icx.local/MobileServiceNew/MobileService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/iTechArt.MG.MobileService.Model.Responses" />
+      <xsd:import schemaLocation="http://smg-new.icx.local/MobileServiceNew/MobileService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/iTechArt.MG.MobileService.Model.Requests" />
+      <xsd:import schemaLocation="http://smg-new.icx.local/MobileServiceNew/MobileService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/iTechArt.MG.MobileService.Model.Entities" />
+      <xsd:import schemaLocation="http://smg-new.icx.local/MobileServiceNew/MobileService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/iTechArt.MG.DataModel.Organization" />
+      <xsd:import schemaLocation="http://smg-new.icx.local/MobileServiceNew/MobileService.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMobileService_Authenticate_InputMessage">
+    <wsdl:part name="parameters" element="tns:Authenticate" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_Authenticate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_PostAuthenticate_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostAuthenticate" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_PostAuthenticate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostAuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetAllDepartments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDepartments" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetAllDepartments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDepartmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetAllDepartmentsUpdated_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDepartmentsUpdated" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetAllDepartmentsUpdated_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDepartmentsUpdatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetAllEmployees_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEmployees" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetAllEmployees_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetEmployeesByDeptId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeesByDeptId" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetEmployeesByDeptId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeesByDeptIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetEmployeesByDeptIdUpdated_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeesByDeptIdUpdated" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetEmployeesByDeptIdUpdated_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeesByDeptIdUpdatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetEmployeeDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetEmployeeDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetEmployeeDetailsUpdated_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeDetailsUpdated" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetEmployeeDetailsUpdated_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeDetailsUpdatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetAllRequests_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRequests" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetAllRequests_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRequestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetRequestForm_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestForm" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetRequestForm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetAllRecipients_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRecipients" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetAllRecipients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRecipientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetAllAvailableListeners_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAvailableListeners" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetAllAvailableListeners_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAvailableListenersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_PostRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostRequest" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_PostRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetEmployeesShortInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeesShortInfo" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetEmployeesShortInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeesShortInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetEmployeeDetailsListByDeptId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeDetailsListByDeptId" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetEmployeeDetailsListByDeptId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeDetailsListByDeptIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMobileService">
+    <wsdl:operation name="Authenticate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/Authenticate" message="tns:IMobileService_Authenticate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/AuthenticateResponse" message="tns:IMobileService_Authenticate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostAuthenticate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/PostAuthenticate" message="tns:IMobileService_PostAuthenticate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/PostAuthenticateResponse" message="tns:IMobileService_PostAuthenticate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDepartments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetAllDepartments" message="tns:IMobileService_GetAllDepartments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetAllDepartmentsResponse" message="tns:IMobileService_GetAllDepartments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDepartmentsUpdated">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetAllDepartmentsUpdated" message="tns:IMobileService_GetAllDepartmentsUpdated_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetAllDepartmentsUpdatedResponse" message="tns:IMobileService_GetAllDepartmentsUpdated_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployees">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetAllEmployees" message="tns:IMobileService_GetAllEmployees_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetAllEmployeesResponse" message="tns:IMobileService_GetAllEmployees_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeesByDeptId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetEmployeesByDeptId" message="tns:IMobileService_GetEmployeesByDeptId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetEmployeesByDeptIdResponse" message="tns:IMobileService_GetEmployeesByDeptId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeesByDeptIdUpdated">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetEmployeesByDeptIdUpdated" message="tns:IMobileService_GetEmployeesByDeptIdUpdated_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetEmployeesByDeptIdUpdatedResponse" message="tns:IMobileService_GetEmployeesByDeptIdUpdated_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetEmployeeDetails" message="tns:IMobileService_GetEmployeeDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetEmployeeDetailsResponse" message="tns:IMobileService_GetEmployeeDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeDetailsUpdated">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetEmployeeDetailsUpdated" message="tns:IMobileService_GetEmployeeDetailsUpdated_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetEmployeeDetailsUpdatedResponse" message="tns:IMobileService_GetEmployeeDetailsUpdated_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRequests">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetAllRequests" message="tns:IMobileService_GetAllRequests_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetAllRequestsResponse" message="tns:IMobileService_GetAllRequests_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestForm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetRequestForm" message="tns:IMobileService_GetRequestForm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetRequestFormResponse" message="tns:IMobileService_GetRequestForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRecipients">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetAllRecipients" message="tns:IMobileService_GetAllRecipients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetAllRecipientsResponse" message="tns:IMobileService_GetAllRecipients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAvailableListeners">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetAllAvailableListeners" message="tns:IMobileService_GetAllAvailableListeners_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetAllAvailableListenersResponse" message="tns:IMobileService_GetAllAvailableListeners_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/PostRequest" message="tns:IMobileService_PostRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/PostRequestResponse" message="tns:IMobileService_PostRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeesShortInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetEmployeesShortInfo" message="tns:IMobileService_GetEmployeesShortInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetEmployeesShortInfoResponse" message="tns:IMobileService_GetEmployeesShortInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeDetailsListByDeptId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetEmployeeDetailsListByDeptId" message="tns:IMobileService_GetEmployeeDetailsListByDeptId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetEmployeeDetailsListByDeptIdResponse" message="tns:IMobileService_GetEmployeeDetailsListByDeptId_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="MobileService" />
+</wsdl:definitions>

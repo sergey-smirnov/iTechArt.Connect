@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/iTechArt.MG.MobileService.Model.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/iTechArt.MG.MobileService.Model.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://smg-new.icx.local/MobileServiceNew/MobileService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/iTechArt.MG.DataModel.Organization" />
+  <xs:complexType name="ArrayOfDepartmentWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DepartmentWS" nillable="true" type="tns:DepartmentWS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDepartmentWS" nillable="true" type="tns:ArrayOfDepartmentWS" />
+  <xs:complexType name="DepartmentWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DepCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumUsers" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DepartmentWS" nillable="true" type="tns:DepartmentWS" />
+  <xs:complexType name="ArrayOfProfileShortWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProfileShortWS" nillable="true" type="tns:ProfileShortWS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProfileShortWS" nillable="true" type="tns:ArrayOfProfileShortWS" />
+  <xs:complexType name="ProfileShortWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeptId" type="xs:int" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstNameEng" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastNameEng" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Position" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfileId" type="xs:int" />
+      <xs:element minOccurs="0" name="Room" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProfileShortWS" nillable="true" type="tns:ProfileShortWS" />
+  <xs:complexType name="ProfileFullWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Birthday" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeptId" type="xs:int" />
+      <xs:element minOccurs="0" name="DomenName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstNameEng" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastNameEng" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfileId" type="xs:int" />
+      <xs:element minOccurs="0" name="Rank" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Room" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Skype" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProfileFullWS" nillable="true" type="tns:ProfileFullWS" />
+  <xs:complexType name="ArrayOfRequestWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RequestWS" nillable="true" type="tns:RequestWS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRequestWS" nillable="true" type="tns:ArrayOfRequestWS" />
+  <xs:complexType name="RequestWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllDayEvent" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DepName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfileId" type="xs:int" />
+      <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserNameEng" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VacationType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VacationTypeId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestWS" nillable="true" type="tns:RequestWS" />
+  <xs:complexType name="RequestFormWS">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/iTechArt.MG.DataModel.Organization" minOccurs="0" name="Approvers" nillable="true" type="q1:ArrayOfApproverListItem" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/iTechArt.MG.DataModel.Organization" minOccurs="0" name="CurrentProjects" nillable="true" type="q2:ArrayOfProjectInfo" />
+      <xs:element minOccurs="0" name="IsNotificationAvailable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Remaining" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestFormWS" nillable="true" type="tns:RequestFormWS" />
+  <xs:complexType name="ArrayOfProfileExtraShortWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProfileExtraShortWS" nillable="true" type="tns:ProfileExtraShortWS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProfileExtraShortWS" nillable="true" type="tns:ArrayOfProfileExtraShortWS" />
+  <xs:complexType name="ProfileExtraShortWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstNameEng" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastNameEng" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfileId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProfileExtraShortWS" nillable="true" type="tns:ProfileExtraShortWS" />
+  <xs:complexType name="ArrayOfProfileFullWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProfileFullWS" nillable="true" type="tns:ProfileFullWS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProfileFullWS" nillable="true" type="tns:ArrayOfProfileFullWS" />
+</xs:schema>
