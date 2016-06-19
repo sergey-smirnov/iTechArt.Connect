@@ -11,7 +11,8 @@ const MinskCenter = {
 const MapComponent = React.createClass({
     propTypes: {
       events: PropTypes.array.isRequired,
-      showEventsList: PropTypes.bool
+      showEventsList: PropTypes.bool,
+      draggableMarker: PropTypes.bool
     },
     componentDidMount: function() {
       L.mapbox.accessToken = 'pk.eyJ1Ijoic3NtaXJub3YiLCJhIjoiY2lwazg5bXU5MDA3dnZibnE4ams0cjFtbCJ9.qmmwcN7jdnEcJjXG3Wvk0w';
@@ -29,27 +30,33 @@ const MapComponent = React.createClass({
                   "description": e.description,
                   "from": moment.unix(e.dateFrom).format('LLLL'),
                   "to": moment.unix(e.dateTo).format('LLLL'),
-                  "marker-color": "#3ca0d3",
+                  "marker-color": "#ff8888",
                   "marker-size": "large",
                   "marker-symbol": "bar"
               }
           }
       });
 
-      var map = L.mapbox.map('map', 'mapbox.light')
+      var map = L.mapbox.map('map', 'mapbox.streets')
           .setView([MinskCenter.Latitude, MinskCenter.Longitude], 13);
 
       var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson);
 
+      var draggableMarker;
+      if (this.props.draggableMarker) {
+          draggableMarker = L.marker(new L.LatLng(MinskCenter.Latitude, MinskCenter.Longitude), {
+              icon: L.mapbox.marker.icon({
+                  'marker-color': 'ff8888'
+              }),
+              draggable: true
+          });
+          draggableMarker.bindPopup('Just added event');
+          draggableMarker.addTo(map);
+      }
+
       myLayer.on('layeradd', function(e) {
           var marker = e.layer,
               feature = marker.feature;
-
-          // Create custom popup content
-          // var popupContent = '<a target="_blank" class="popup" href="' + feature.properties.name + '">' +
-          //     '<img src="' + feature.properties.image + '" />' +
-          //     feature.properties.name +
-          //     '</a>';
 
           var content = '<h2>' + feature.properties.name + '<\/h2>' +
             '<img src="' + feature.properties.image + '" />' +
