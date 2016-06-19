@@ -11,9 +11,9 @@ import {List, ListItem} from 'material-ui/List';
 import ContentInbox from 'material-ui/svg-icons/content/inbox';
 import ActionGrade from 'material-ui/svg-icons/action/grade';
 import ContentSend from 'material-ui/svg-icons/content/send';
-import ContentDrafts from 'material-ui/svg-icons/content/drafts';
-import Divider from 'material-ui/Divider';
 import ActionInfo from 'material-ui/svg-icons/action/info';
+
+import CommunicationEmail from 'material-ui/svg-icons/communication/email';
 
 const userImageStyle = {
     height: 150,
@@ -42,7 +42,7 @@ const EmployeeCard = ({ employee }) => (
         <ListItem primaryText={employee.profile.firstName + ' ' + employee.profile.lastName}/>
         <ListItem primaryText={employee.department.code}  leftIcon={<ContentSend />} />
         <ListItem primaryText={employee.profile.position} leftIcon={<ActionGrade />} />
-        <ListItem primaryText={employee.profile.email}  leftIcon={<ContentDrafts />} />
+        <ListItem primaryText={employee.profile.email}  leftIcon={<CommunicationEmail />} />
       </List>
     </div>
 );

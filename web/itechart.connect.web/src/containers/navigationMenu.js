@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import DrawerMenu from '../components/app/drawerMenu.js';
 
 const mapStateToProps = (state) => {
-    return { }
+    return {}
 }
 
 const mapDispatchToProps = (dispatch) => {
