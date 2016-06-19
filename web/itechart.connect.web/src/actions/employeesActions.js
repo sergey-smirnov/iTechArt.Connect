@@ -17,15 +17,16 @@ const EmployeesActions = {
             let me = this;
 
             dispatch(this.RequestEmployees());
-            let departmentCode = getState().user.get('profile').department.code;
-            xhr.get(`${URL}?departmentCode=${departmentCode}`, {
+            // let departmentCode = getState().user.get('profile').department.code;
+            // xhr.get(`${URL}?departmentCode=${departmentCode}`, {
+            xhr.get(`${URL}`, {
                     headers: {
                       'Authorization': 'Bearer ' + getState().user.get('token')
                     },
                     responseType: 'json'
                 })
                 .then(function(response) {
-                    dispatch(me.EmployeesFetched(response.body.result.items/*.slice(50,100)*/));
+                    dispatch(me.EmployeesFetched(response.body.result.items.slice(50,100)));
                 });
         }
     },

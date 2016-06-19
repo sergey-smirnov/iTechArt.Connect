@@ -2,12 +2,16 @@ import { connect } from 'react-redux';
 
 import MapComponent from '../components/map/mapComponent.js';
 
+import { Events } from '../data/events.js';
+
 const mapStateToProps = (state) => {
     return {}
 }
 
 const mapDispatchToProps = (dispatch) => {
-    return {}
+    return {
+        events: Events
+    }
 }
 
 const MapContainer = connect(

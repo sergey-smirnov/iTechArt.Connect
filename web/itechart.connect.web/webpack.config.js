@@ -21,7 +21,8 @@ module.exports = {
     resolveLoader: {
         root: [
             path.resolve(__dirname, 'node_modules')
-        ]
+        ],
+        extensions: ['', '.json', '.jsx', '.js']
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
@@ -60,6 +61,9 @@ module.exports = {
                 'autoprefixer?browsers=last 3 version!' +
                 'less?sourceMap'
             )
+        }, {
+            include: /\.json$/,
+            loaders: ["json-loader"]
         }]
     }
 };

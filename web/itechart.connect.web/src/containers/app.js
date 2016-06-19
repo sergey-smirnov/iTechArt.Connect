@@ -19,6 +19,7 @@ import NavigationMenu from './navigationMenu.js';
 import MapContainer from './mapContainer.js';
 import AuthContainer from './authContainer.js';
 import EmployeesContainer from './employeesContainer.js';
+import EventsContainer from './eventsContainer.js';
 
 import { omReactApp } from '../reducers/reducers.js';
 
@@ -53,6 +54,7 @@ export default class App extends Component {
                 <Route path="/" component={Page}>
                   <Route path="map" component={MapContainer}/>
                   <Route path="users" component={EmployeesContainer}/>
+                  <Route path="events" component={EventsContainer}/>
                 </Route>
               </Router>
               </Provider>

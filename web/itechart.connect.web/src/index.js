@@ -13,4 +13,5 @@ require('../assets/styles/app.less');
 // Check this repo:
 // https://github.com/zilverline/react-tap-event-plugin
 injectTapEventPlugin();
+
 ReactDOM.render(<App />, document.getElementById('root'));

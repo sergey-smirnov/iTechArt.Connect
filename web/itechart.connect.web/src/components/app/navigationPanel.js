@@ -21,7 +21,7 @@ import { fullWhite } from 'material-ui/styles/colors';
 const ItemStyle = {
   color: 'white'
 };
-console.log(browserHistory);
+
 const NavigationPanel = ({currentPage}) => (
   <List className='navigation-panel-list'>
     <ListItem primaryText="Map" onClick={() => browserHistory.push('/map')} rightIcon={<ActionInfo />} style={ItemStyle}/>
