@@ -20,6 +20,7 @@ import MapContainer from './mapContainer.js';
 import AuthContainer from './authContainer.js';
 import EmployeesContainer from './employeesContainer.js';
 import EventsContainer from './eventsContainer.js';
+import EventForm from '../components/events/eventForm.js';
 
 import { omReactApp } from '../reducers/reducers.js';
 
@@ -55,6 +56,7 @@ export default class App extends Component {
                   <Route path="map" component={MapContainer}/>
                   <Route path="users" component={EmployeesContainer}/>
                   <Route path="events" component={EventsContainer}/>
+                  <Route path="addevent" component={EventForm}/>
                 </Route>
               </Router>
               </Provider>

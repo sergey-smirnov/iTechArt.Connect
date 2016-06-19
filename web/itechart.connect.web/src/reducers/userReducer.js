@@ -36,8 +36,7 @@ export function user(state = InitialState, action) {
                 .set('isAuthenticationInProgress', false);
         case UserActions.PROFILE_FETCHED:
             return state
-                .set('profile', action.profile)
-                .set('isAuthenticationInProgress', false);
+                .set('profile', action.profile);
         case UserActions.UNAUTHENTICATE:
             return InitialState;
         default:

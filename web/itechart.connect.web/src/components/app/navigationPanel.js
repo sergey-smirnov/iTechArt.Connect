@@ -27,6 +27,7 @@ const NavigationPanel = ({currentPage}) => (
     <ListItem primaryText="Map" onClick={() => browserHistory.push('/map')} rightIcon={<ActionInfo />} style={ItemStyle}/>
     <ListItem primaryText="Users" onClick={() => browserHistory.push('/users')} rightIcon={<ActionInfo />} style={ItemStyle}/>
     <ListItem primaryText="Events" onClick={() => browserHistory.push('/events')} rightIcon={<ActionInfo />} style={ItemStyle}/>
+    <ListItem primaryText="New Event" onClick={() => browserHistory.push('/addevent')} rightIcon={<ActionInfo />} style={ItemStyle}/>
   </List>
 );
 

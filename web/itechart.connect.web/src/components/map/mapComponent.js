@@ -34,7 +34,7 @@ const MapComponent = React.createClass({
       });
 
       var map = L.mapbox.map('map', 'mapbox.light')
-          .setView([MinskCenter.Latitude, MinskCenter.Longitude], 12);
+          .setView([MinskCenter.Latitude, MinskCenter.Longitude], 13);
 
       var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson);
 
