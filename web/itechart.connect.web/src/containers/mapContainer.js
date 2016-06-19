@@ -5,7 +5,9 @@ import MapComponent from '../components/map/mapComponent.js';
 import { Events } from '../data/events.js';
 
 const mapStateToProps = (state) => {
-    return {}
+    return {
+        showEventsList: true
+    }
 }
 
 const mapDispatchToProps = (dispatch) => {

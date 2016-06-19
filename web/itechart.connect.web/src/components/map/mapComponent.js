@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react'
 var moment = require('moment');
 
+import EventsContainer from '../../containers/eventsContainer.js';
+
 const MinskCenter = {
     Latitude: 53.900719,
     Longitude: 27.558903
@@ -8,7 +10,8 @@ const MinskCenter = {
 
 const MapComponent = React.createClass({
     propTypes: {
-      events: PropTypes.array.isRequired
+      events: PropTypes.array.isRequired,
+      showEventsList: PropTypes.bool
     },
     componentDidMount: function() {
       L.mapbox.accessToken = 'pk.eyJ1Ijoic3NtaXJub3YiLCJhIjoiY2lwazg5bXU5MDA3dnZibnE4ams0cjFtbCJ9.qmmwcN7jdnEcJjXG3Wvk0w';
@@ -68,6 +71,7 @@ const MapComponent = React.createClass({
       return (
         <div className='map-component-container'>
           <div id='map'></div>
+          {this.props.showEventsList ?  (<div className='map-events-list'><div><EventsContainer /></div></div>): null}
         </div>
       );
     }
