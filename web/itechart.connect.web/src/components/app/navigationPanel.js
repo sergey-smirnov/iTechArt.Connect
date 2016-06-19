@@ -5,8 +5,11 @@ import { List, ListItem, MakeSelectable } from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
 import Subheader from 'material-ui/Subheader';
 
-
 import ActionInfo from 'material-ui/svg-icons/action/info';
+import IconEvent from 'material-ui/svg-icons/action/event';
+import IconAdd from 'material-ui/svg-icons/maps/add-location';
+import IconPeople from 'material-ui/svg-icons/social/people';
+import IconMap from 'material-ui/svg-icons/maps/map';
 
 import IconButton from 'material-ui/IconButton';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -24,10 +27,10 @@ const ItemStyle = {
 
 const NavigationPanel = ({currentPage}) => (
   <List className='navigation-panel-list'>
-    <ListItem primaryText="Map" onClick={() => browserHistory.push('/map')} rightIcon={<ActionInfo />} style={ItemStyle}/>
-    <ListItem primaryText="Users" onClick={() => browserHistory.push('/users')} rightIcon={<ActionInfo />} style={ItemStyle}/>
-    <ListItem primaryText="Events" onClick={() => browserHistory.push('/events')} rightIcon={<ActionInfo />} style={ItemStyle}/>
-    <ListItem primaryText="New Event" onClick={() => browserHistory.push('/addevent')} rightIcon={<ActionInfo />} style={ItemStyle}/>
+    <ListItem primaryText="Map" onClick={() => browserHistory.push('/map')} rightIcon={<IconMap />} style={ItemStyle}/>
+    <ListItem primaryText="People" onClick={() => browserHistory.push('/users')} rightIcon={<IconPeople />} style={ItemStyle}/>
+    <ListItem primaryText="Events" onClick={() => browserHistory.push('/events')} rightIcon={<IconEvent />} style={ItemStyle}/>
+    <ListItem primaryText="New Event" onClick={() => browserHistory.push('/addevent')} rightIcon={<IconAdd />} style={ItemStyle}/>
   </List>
 );
 
